@@ -7,6 +7,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface cheapshark {
-    @GET("/deals?storeID=1&upperPrice15")
-    Call<List<DEAL>> getData(@Query("storeID") String id);
+    @GET("deals")
+    Call<List<DEAL>> getDeals(
+            @Query("storeID") String storeID,
+            @Query("upperPrice") Integer upperPrice
+    );
 }
