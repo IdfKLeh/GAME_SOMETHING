@@ -11,4 +11,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_game">Game</string>
+
+    <string name="defaultins">Insert Name</string>
+    <string name="empty"></string>
 </resources>

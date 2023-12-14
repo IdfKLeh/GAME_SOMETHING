@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="99dp"
+        android:layout_height="101dp"
+        android:src="@drawable/default_thumbnail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="305dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/thumbnailImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/normalpriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/thumbnailImageView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/salepriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/normalpriceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/meta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Meta Score:"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalpriceTextView" />
+
+    <TextView
+        android:id="@+id/metacriticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/meta"
+        app:layout_constraintTop_toBottomOf="@+id/salepriceTextView" />
+
+    <TextView
+        android:id="@+id/Steam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Steam Reviews:"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meta" />
+
+    <TextView
+        android:id="@+id/steamratingcountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/Steam"
+        app:layout_constraintTop_toBottomOf="@+id/meta" />
+
+    <TextView
+        android:id="@+id/steamratingpercentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/steamratingcountTextView"
+        app:layout_constraintTop_toBottomOf="@+id/metacriticTextView" />
+
+    <TextView
+        android:id="@+id/steamratingtextTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/steamratingcountTextView" />
+
+    <TextView
+        android:id="@+id/madewhen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Release Date:"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/steamratingtextTextView" />
+
+    <TextView
+        android:id="@+id/releasedateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/madewhen"
+        app:layout_constraintTop_toBottomOf="@+id/steamratingtextTextView" />
+
+    <TextView
+        android:id="@+id/howgooddeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="How good is this deal?"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madewhen" />
+
+    <TextView
+        android:id="@+id/dealratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="40dp"
+        app:layout_constraintStart_toEndOf="@+id/howgooddeal"
+        app:layout_constraintTop_toBottomOf="@+id/releasedateTextView" />
+
+    <ImageButton
+        android:id="@+id/gobuythisbutton"
+        android:layout_width="139dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toEndOf="@+id/metacriticTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:srcCompat="@drawable/cheapshark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

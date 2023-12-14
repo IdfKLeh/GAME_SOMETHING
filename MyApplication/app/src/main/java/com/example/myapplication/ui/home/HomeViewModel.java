@@ -21,40 +21,51 @@ import java.util.List;
 public class HomeViewModel extends ViewModel {
 
 
-    private final MutableLiveData<String> mText;
+
+    private final MutableLiveData<String> insTitle;
+    private final MutableLiveData<Integer> insHigh;
+    private final MutableLiveData<String> Title;
+    private final MutableLiveData<String> High;
+    private final MutableLiveData<Boolean> isAAA;
+    private final MutableLiveData<Boolean> isSteamRedeem;
+    private final MutableLiveData<Boolean> isOnSale;
 
     public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+
+        insTitle = new MutableLiveData<>();
+        insHigh = new MutableLiveData<>();
+        Title = new MutableLiveData<>();
+        High = new MutableLiveData<>();
+        isAAA = new MutableLiveData<>();
+        isSteamRedeem = new MutableLiveData<>();
+        isOnSale = new MutableLiveData<>();
+
+        Title.setValue("Title");
+        High.setValue("Maximum price");
+        //GetDealData();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+
+    public LiveData<String> getInsTitle() {
+        return insTitle;
+    }
+    public LiveData<Integer> getInsHigh() {return  insHigh;}
+    public LiveData<String> getTitleText(){return Title;}
+    public LiveData<String> getHighText(){return High;}
+    public LiveData<Boolean> getIsAAA(){return isAAA;}
+    public LiveData<Boolean> getIsSteamRedeem(){return isSteamRedeem;}
+    public LiveData<Boolean> getIsOnSale(){return isOnSale;}
+    public void setIsAAA(boolean value) {
+        isAAA.setValue(value);
     }
 
-    private void GetDealData(){
-        cheapshark cheapShark = cheapsharkapiclient.create();
-
-        Call<List<DEAL>> call = cheapShark.getDeals("1",15);
-
-        call.enqueue(new Callback<List<DEAL>>(){
-            @Override
-            public void onResponse(Call<List<DEAL>> call, Response<List<DEAL>> response){
-                if(response.isSuccessful()){
-
-                }
-                else {
-                    mText.setValue();
-
-                }
-            }
-            @Override
-            public void onFailure(Call<List<DEAL>> call, Throwable t){
-
-            }
-        });
+    public void setIsSteamRedeem(boolean value) {
+        isSteamRedeem.setValue(value);
     }
 
+    public void setIsOnSale(boolean value) {
+        isOnSale.setValue(value);
+    }
 
 
 }
